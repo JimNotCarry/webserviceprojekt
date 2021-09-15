@@ -2,7 +2,7 @@ package com.g7.webserviceprojekt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-	//Hannes Branch
+	//Hannes own dis' Branch
 @SpringBootApplication
 public class WebserviceprojektApplication {
 
