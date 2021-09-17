@@ -1,17 +1,19 @@
 package com.g7.webserviceprojekt;
 
-public class Person {
 
+public class Person {
     private int ID;
     private String Name;
-    private String Password;
     private String Email;
+    private String Password;
 
-    public Person (int id, String name, String password, String email) {
+    public Person() {
+    }
+    public Person(int id, String name, String email, String password) {
         this.ID = id;
         this.Name = name;
-        this.Password = password;
         this.Email = email;
+        this.Password = password;
     }
 
     public int getID() {
@@ -30,19 +32,19 @@ public class Person {
         Name = name;
     }
 
-    public String getPassword() {
-        return Password;
-    }
-
-    public void setPassword(String password) {
-        Password = password;
-    }
-
     public String getEmail() {
         return Email;
     }
 
     public void setEmail(String email) {
         Email = email;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
     }
 }
