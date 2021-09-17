@@ -5,7 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 	//Hannes own dis' Branch.
 @SpringBootApplication
 public class WebserviceprojektApplication {
-
+	//Linus Heeejo
+	//johanna
 	public static void main(String[] args) {
 		SpringApplication.run(WebserviceprojektApplication.class, args);
 	}
