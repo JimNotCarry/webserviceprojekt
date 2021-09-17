@@ -1,7 +1,12 @@
 package com.g7.webserviceprojekt;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Person {
+
+    @Id
     private int ID;
     private String Name;
     private String Email;
