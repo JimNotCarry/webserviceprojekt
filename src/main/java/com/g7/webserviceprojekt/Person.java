@@ -3,6 +3,8 @@ package com.g7.webserviceprojekt;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+//Lucas
+
 @Entity
 public class Person {
 
