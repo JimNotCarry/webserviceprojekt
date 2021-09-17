@@ -3,7 +3,7 @@ package com.g7.webserviceprojekt;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-//Lucas
+//Lucas testar gitignore
 
 @Entity
 public class Person {
