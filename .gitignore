@@ -15,7 +15,7 @@ target/
 
 ### Sensitive Data ###
 src/main/resources/
-###application.properties
+###application.properties/
 
 ### IntelliJ IDEA ###
 .idea
