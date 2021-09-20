@@ -10,6 +10,17 @@ public class Accounts {
     private int ID;
     private String Name;
     private String Email;
+
+    @Override
+    public String toString() {
+        return "Accounts{" +
+                "ID=" + ID +
+                ", Name='" + Name + '\'' +
+                ", Email='" + Email + '\'' +
+                ", Password='" + Password + '\'' +
+                '}';
+    }
+
     private String Password;
 
     public Accounts() {
