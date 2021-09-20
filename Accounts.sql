@@ -39,3 +39,7 @@ INSERT INTO Accounts (ID, Name, Email, Password, lastUpdate)
 VALUES ('1011', 'Lucas Holm', 'lucas@holm.se', 'pleasedonthack', CURRENT_TIMESTAMP);
 
 SELECT * FROM Accounts;
+
+SELECT * FROM Accounts WHERE ID = '1001';
+
+SELECT * FROM Accounts WHERE Name LIKE '%Lars%';
