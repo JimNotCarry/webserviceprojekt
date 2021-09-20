@@ -18,7 +18,7 @@ public class AccountController {
         // @RequestParam means it is a parameter from the GET or POST request
         accountsService.addNewPerson(name,email,password);
 
-        return "Hej";
+        return "Add complete!";
     }
 
     @GetMapping(path="/all")
