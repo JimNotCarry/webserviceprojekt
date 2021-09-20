@@ -3,10 +3,9 @@ package com.g7.webserviceprojekt;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-//Lucas testar gitignore
 
 @Entity
-public class Person {
+public class Accounts {
 
     @Id
     private int ID;
@@ -14,9 +13,9 @@ public class Person {
     private String Email;
     private String Password;
 
-    public Person() {
+    public Accounts() {
     }
-    public Person(int id, String name, String email, String password) {
+    public Accounts(int id, String name, String email, String password) {
         this.ID = id;
         this.Name = name;
         this.Email = email;
