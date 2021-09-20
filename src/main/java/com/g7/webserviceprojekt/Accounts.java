@@ -3,7 +3,6 @@ package com.g7.webserviceprojekt;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
 @Entity
 public class Accounts {
 
@@ -15,6 +14,7 @@ public class Accounts {
 
     public Accounts() {
     }
+
     public Accounts(int id, String name, String email, String password) {
         this.ID = id;
         this.Name = name;
