@@ -44,4 +44,28 @@ public class AccountsService {
         return acc;
     }
 
+    public Accounts updateAccount(int id, String name, String email, String password) {
+
+        Accounts account = findAccountById(id);
+        if (name != null) {
+            account.setName(name);
+        }
+        if (email != null) {
+            account.setEmail(email);
+        }
+        if (password != null) {
+            account.setPassword(password);
+        }
+
+        AccountRepository.save(account);
+        return account;
+    }
+
+    public String deleteById(int id) {
+        Accounts acc = findAccountById(id);
+        AccountRepository.deleteById(id);
+
+        return "Id " +id + " has been deleted \n" +acc.toString();
+    }
+
 }

@@ -28,9 +28,17 @@ public class AccountController {
     }
 
     @PutMapping(path="/update")
-    public @ResponseBody Accounts updateAccountByName(int id, String name) {
-        return accountsService.updateAccountByName(id,name);
+    public @ResponseBody Accounts updateAccountByName(int id, String name, String email, String password) {
+        return accountsService.updateAccount(id, name, email, password);
     }
+
+    @DeleteMapping(path="/delete")
+    public @ResponseBody String deleteById(int id) {
+
+        return accountsService.deleteById(id);
+    }
+
+
 
 
 }
