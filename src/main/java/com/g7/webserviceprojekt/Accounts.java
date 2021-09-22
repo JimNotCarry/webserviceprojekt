@@ -2,7 +2,10 @@ package com.g7.webserviceprojekt;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
 
+
+@XmlRootElement
 @Entity
 public class Accounts {
 
@@ -10,6 +13,8 @@ public class Accounts {
     private int ID;
     private String Name;
     private String Email;
+    private String Password;
+    private String Image;
 
     @Override
     public String toString() {
@@ -18,19 +23,19 @@ public class Accounts {
                 ", Name='" + Name + '\'' +
                 ", Email='" + Email + '\'' +
                 ", Password='" + Password + '\'' +
+                ", Image='" + Image + '\'' +
                 '}';
     }
-
-    private String Password;
 
     public Accounts() {
     }
 
-    public Accounts(int id, String name, String email, String password) {
+    public Accounts(int id, String name, String email, String password, String image) {
         this.ID = id;
         this.Name = name;
         this.Email = email;
         this.Password = password;
+        this.Image = image;
     }
 
     public int getID() {
@@ -63,5 +68,13 @@ public class Accounts {
 
     public void setPassword(String password) {
         Password = password;
+    }
+
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String image) {
+        Image = image;
     }
 }
