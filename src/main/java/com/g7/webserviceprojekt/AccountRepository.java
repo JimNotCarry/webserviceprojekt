@@ -13,4 +13,6 @@ public interface AccountRepository extends JpaRepository<Accounts, Integer> {
     @Query ("FROM Accounts WHERE Email LIKE %?1%")
     List<Accounts> findByEmailContains(String email);
 
+
+
 }
