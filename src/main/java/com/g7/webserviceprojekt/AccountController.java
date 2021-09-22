@@ -1,6 +1,7 @@
 package com.g7.webserviceprojekt;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,8 +21,8 @@ public class AccountController {
 
         return "Hej";
     }
-    @RequestMapping(path="/allXml", produces = { "application/xml", "text/xml" })
-    @GetMapping(path="/all")
+
+    @GetMapping(path="/allXml", produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
     public @ResponseBody Iterable<Accounts> getAllPersons() {
         // This returns a JSON or XML with the users
         return accountsService.getAllPersons();
