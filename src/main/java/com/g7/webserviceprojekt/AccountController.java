@@ -16,11 +16,11 @@ public class AccountController {
     @PostMapping(path="/add")
     public @ResponseBody String addNewPerson (@RequestParam String name
             , @RequestParam String email, @RequestParam String password, @RequestParam String image) {
-        accountsService.addNewPerson(name,email,password,image);
+        accountsService.addNewPerson(name,email,password, image);
 
         return "Hej";
     }
-
+    @RequestMapping(path="/allXml", produces = { "application/xml", "text/xml" })
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Accounts> getAllPersons() {
         // This returns a JSON or XML with the users
