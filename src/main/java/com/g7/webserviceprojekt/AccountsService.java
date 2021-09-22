@@ -11,11 +11,12 @@ public class AccountsService {
     @Autowired
     private AccountRepository AccountRepository;
 
-    public String addNewPerson(String name, String email, String password) {
+    public String addNewPerson(String name, String email, String password, String image) {
         Accounts n = new Accounts();
         n.setName(name);
         n.setEmail(email);
         n.setPassword(password);
+        n.setImage(image);
         AccountRepository.save(n);
         return "Saved";
     }

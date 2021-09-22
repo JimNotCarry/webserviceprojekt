@@ -15,8 +15,8 @@ public class AccountController {
 
     @PostMapping(path="/add")
     public @ResponseBody String addNewPerson (@RequestParam String name
-            , @RequestParam String email, @RequestParam String password) {
-        accountsService.addNewPerson(name,email,password);
+            , @RequestParam String email, @RequestParam String password, @RequestParam String image) {
+        accountsService.addNewPerson(name,email,password,image);
 
         return "Hej";
     }
