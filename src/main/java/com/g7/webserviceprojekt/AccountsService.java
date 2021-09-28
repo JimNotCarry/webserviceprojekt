@@ -12,13 +12,23 @@ public class AccountsService {
     private AccountRepository AccountRepository;
 
     public String addNewPerson(String name, String email, String password, String image) {
-        Accounts n = new Accounts();
-        n.setName(name);
-        n.setEmail(email);
-        n.setPassword(password);
-        n.setImage(image);
-        AccountRepository.save(n);
-        return "Saved";
+
+        String status;
+
+        try {
+            Accounts n = new Accounts();
+            n.setName(name);
+            n.setEmail(email);
+            n.setPassword(password);
+            n.setImage(image);
+            AccountRepository.save(n);
+
+            status = "Success!";
+        } catch(Exception e) {
+
+            status = "Failed to post!";
+        }
+        return status;
     }
 
     public Iterable<Accounts> getAllPersons() {
@@ -64,7 +74,7 @@ public class AccountsService {
         Accounts acc = findAccountById(id);
         AccountRepository.deleteById(id);
 
-        return "Id " +id + " has been deleted \n" +acc.toString();
+        return "Id " + id + " has been deleted \n" +acc.toString();
     }
 
     public List<Accounts> findByName(String name) {
